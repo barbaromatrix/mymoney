@@ -17,13 +17,12 @@ app.use(
   })
 );
 
-
 // start server
 app.listen(process.env.PORT || 5000, err => {
   if (err) {
-    console.error(err)
-    throw err
+    console.error(err);
+    throw err;
   }
 
-  console.log('Api is running on port 5000')
+  console.log('Api is running on port 5000');
 });

@@ -1,4 +1,3 @@
-
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Broker = sequelize.define(
@@ -8,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Broker.associate = function (models) {
+  Broker.associate = function(models) {
     this.hasMany(models.Investment);
   };
   return Broker;
-}
+};
