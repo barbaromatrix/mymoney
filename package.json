@@ -19,10 +19,11 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "prettier": "prettier --write \"./{src,client/src}/**/*.{js,scss}\"",
-    "lint": "eslint --fix \"./{src,client/src}/**/*.js\"",
-    "test": "cross-env NODE_ENV=test mocha --recursive",
-    "test:coverage": "nyc --reporter=html --reporter=text npm run test"
+    "prettier": "prettier \"./{src,client/src}/**/*.{js,scss}\"",
+    "prettier:check": "npm run prettier -- -l",
+    "prettier:write": "npm run prettier -- --write",
+    "lint": "eslint \"./{src,client/src}/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix"
   },
   "engines": {
     "node": ">=8.14.0"
