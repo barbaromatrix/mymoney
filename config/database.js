@@ -5,7 +5,7 @@ module.exports = {
     username: 'mymoney',
     password: CONFIG.DATABASE_PASSWORD,
     database: 'mymoney',
-    host: '172.17.0.2',
+    host: '172.17.0.4',
     dialect: 'postgres',
     force: true
   },
