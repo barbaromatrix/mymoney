@@ -3,6 +3,7 @@ const express = require('express');
 const ForestAdmin = require('forest-express-sequelize');
 const { sequelize } = require('./models');
 const secret = require('../config/secret');
+const setupGraphQL = require('./setupGraphQL')
 const app = express();
 
 // static files
@@ -16,6 +17,8 @@ app.use(
     sequelize
   })
 );
+
+setupGraphQL(app);
 
 // start server
 app.listen(process.env.PORT || 5000, err => {
